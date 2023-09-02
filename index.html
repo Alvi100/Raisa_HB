@@ -2,10 +2,20 @@
 <html>
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <script src="code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="type.js"></script>
+        
+      <script src="https://kit.fontawesome.com/68319829d3.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
       <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Qwitcher+Grypen:wght@700&display=swap" rel="stylesheet">
       <title>Raisa's Happy Birthday</title>
+  
+      
+      
      <style type="text/css">
 
 		body{
@@ -64,12 +74,11 @@
 
  .card .text-container #head {
 
-	 font-family: 'Black Ops One', cursive;
-font-family: 'Qwitcher Grypen', cursive;
+	 font-family: Fantasy;
 
 	 font-size: 1.5em;
 
-	 margin: 60px auto 60px auto;
+	 margin: 40px auto 60px auto;
 
 }
 
@@ -195,30 +204,64 @@ font-family: 'Qwitcher Grypen', cursive;
 
 }
 
+h4{
+    margin-bottom: -30px;
+}
+
+h5{
+    margin-top: -60px;
+    text-align:center;
+    font-size: 20px;
+    text-shadow: 3px 3px 3px #ababab;
+}
+
 .req{
     
-    font-size: 20px;
+    font-size: 10px;
     font-weight:600;
     text-align:center;
     margin: 30px;
 }
 
 #txt{
-    font-family: 'Playfair Display', serif;
-font-family: 'Qwitcher Grypen', cursive;
+    margin-top: 0px;
+    font-family: "Sofia", sans-serif;
+}
 }
 
-#ltxt{
-    font-family: 'Kanit', sans-serif;
-font-family: 'Playfair Display', serif;
-font-family: 'Qwitcher Grypen', cursive;
+.text{
+    color: blue;
+    font-size: 08px;
+    font-family: Fantasy;
 }
 
 #wish{
-    font-family: 'Kanit', sans-serif;
-font-family: 'Playfair Display', serif;
-font-family: 'Poppins', sans-serif;
-font-family: 'Qwitcher Grypen', cursive;
+    font-family: "Audiowide", sans-serif;
+    margin-top: 0px;
+    margin-bottom: -10px;
+}
+
+#red{
+    color: red;
+    display: inline-block;
+}
+
+audio{
+    display :none;
+}
+
+#rose{
+    color:#ed09a9;
+}
+
+#raisa{
+    height: 100px;
+    width: 100px;
+    float: right;
+    margin-right:-20px;
+    border: 5px solid #f26b11;
+    border-radius: 50%;
+    
 }
 
 	</style>
@@ -243,25 +286,95 @@ font-family: 'Qwitcher Grypen', cursive;
 
   <div class="text-container">
 
-    <p id="head">Happy Birthday!</p>
+    <p id="head"><span id="hpp"> </span></p>
 
-    <h5>Raisa Akter<b>(Rose)💝</b></h5>
-
-    <p id="txt">I hope your special day will bring you lots of happiness, love, and fun. You deserve them a lot. Enjoy!</p>
+    <h5><span id="rai"> </span></h5>
+ <h4><span id="hello"> </span></h4>
+<p id="red"><b><span id="rose"> </span></b></p>
+<img id="raisa" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgomDJ1nX0uWtkLefpssm4B5Ma9OtwVzIyuJYB4NriDSAnaWI-MuIjGHl8fxfe6fDEUqGnFoJ8AjrVbpJA_MXrhvwUSLZWPqPHtvypJr3VusCJD7Mz-u5_2VTnpmtqfjzhVQgJ0mudSh0u1UlKAwFFX4eL0P8Y19yr19bgbAPDMnsoKtawlcAFXS5TWyk8/s400/raisa.png" alt="Raisa">
+    <p id="txt"><span id="txt1"> </span></p>
     
-    <p id="wish">Happy Birthday To You Rose.Many many happy returns of the day.</p>
+    <p id="wish"><span id="wsh"> </span></p>
 
-    <p id="ltxt">Hope your day goes great!</p>
+    <p class="text"><span id="txt2"> </span></p>
+    
+     <div id="message" style="display: none;">Click to Start Typing</div>
 
   </div>
 
 </div>
 
-<audio autoplay loop><source src="birthday.mp3" type="audio/mp3">
+<audio id="song" controls="" autoplay="" > <source src="birthday.mp3"
+
+type="audio/mp3">
+
 </audio>
 
-<div class="req"><marquee behavior="alternate">Please, Click on the Card.</marquee></div>
+<!-- After Click Javascript Code Start -->
+
+<script >
+    window.addEventListener('click',()=>{ ""
+        document.getElementById("song").play();
+        
+        document.getElementById("vanish").style.display="none";
+        
+  
+    });
+    
+  
+</script>
+
+<!-- After Click Javascript Code END -->
+
+
+<div class="req"><marquee behavior="alternate" id="vanish">Please, Click on the Card onetime and Sound On.</marquee></div>
+
+ <script>
  
+ const textElements = [
+    { id: 'hpp', text: "Happy Birthday!", speed: 500 },
+    { id: 'rai', text: "Raisa", speed: 750 },
+    { id: 'hello', text: "Hello!!", speed: 750 },
+    { id: 'rose', text: "Red Rose,", speed: 750 },
+    { id: 'txt1', text: "I hope your special day will bring you lots of happiness, love, and fun. You deserve them a lot. Enjoy!", speed: 50 },
+    { id: 'wsh', text: "Happy Birthday To You Rose. Many many happy returns of the day.", speed: 450, delay:1000 },
+    { id: 'txt2', text: "Hope your day goes great!", speed: 300 },
+    
+];
+
+let typingStarted = false; // Add a variable to track if typing has started
+
+function typeText(textElement, textToType, speed) {
+    let index = 0;
+    const element = document.getElementById(textElement.id);
+
+    function type() {
+        if (index < textToType.length) {
+            element.textContent += textToType.charAt(index);
+            index++;
+            setTimeout(type, speed); // Use the provided speed for typing
+        }
+    }
+
+    type();
+}
+
+// Function to show the message and start typing on click
+function startTypingOnClick() {
+    if (!typingStarted) { // Check if typing hasn't started yet
+        document.getElementById('message').style.display = 'none'; // Hide the message
+        for (const textElement of textElements) {
+            typeText(textElement, textElement.text, textElement.speed);
+        }
+        typingStarted = true; // Set typingStarted to true to prevent starting again
+    }
+}
+
+// Add a click event listener to start typing and show the message
+window.addEventListener('click', startTypingOnClick); 
+        
+
+</script>	
 
 </body>
 
